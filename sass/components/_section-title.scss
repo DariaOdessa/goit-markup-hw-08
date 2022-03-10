@@ -1,0 +1,11 @@
+.section__title {
+  margin-bottom: 30px;
+  @include font(28px, 700, 32.81px, null);
+  text-align: center;
+  color: var(--header-text-color);
+
+  @include desk {
+    margin-bottom: 50px;
+    @include font(36px, 700, 42px, null);
+  }
+}

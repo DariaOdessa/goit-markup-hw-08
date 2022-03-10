@@ -1,0 +1,53 @@
+.section--background-gray {
+  background-color: #f5f4fa;
+}
+
+.team {
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+.team__item {
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  @include tab {
+    margin: 15px;
+    flex-basis: calc((100% - 60px) / 2);
+  }
+
+  @include desk {
+    flex-basis: calc((100% - 120px) / 4);
+  }
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.team__card {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.team__title {
+  margin-bottom: 10px;
+  @include font(16px, 500, 19px, null);
+
+  color: var(--header-text-color);
+}
+
+.team__text {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  color: var(--first-text-color);
+}

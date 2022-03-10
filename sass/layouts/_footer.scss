@@ -1,0 +1,156 @@
+.footer {
+  background-color: #2f303a;
+  @include desk {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.footer__container {
+  text-align: center;
+  @include desk {
+    display: flex;
+    align-items: baseline;
+    text-align: left;
+  }
+}
+
+.footer__wrap {
+  @include tab {
+    display: flex;
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+      justify-content: space-around;
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.footer__wrap {
+  @include tab {
+    flex-grow: 1;
+    align-items: baseline;
+  }
+
+  @include desk {
+    justify-content: center;
+  }
+}
+
+.footer-nav__logo {
+  margin-bottom: 20px;
+}
+
+.footer-contacts {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+}
+
+.footer-contacts__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-contacts__link {
+  font-style: normal;
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &--white-theme {
+    color: var(--second-text-color);
+  }
+
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+.join {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
+  // @media screen and (min-width: 480px) and (max-width: 1199px) {
+  //   padding-top: 5px;
+  // }
+
+  @include desk {
+    margin-left: 70px;
+    margin-right: 93px;
+  }
+}
+
+.join__text,
+.subscribe__text {
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: calc(16.41 / 14);
+  text-align: center;
+
+  text-transform: uppercase;
+  color: var(--second-text-color);
+
+  @include desk {
+    text-align: left;
+  }
+}
+
+.socials__link--dark {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--second-text-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus,
+  &:hover {
+    background-color: var(--accent-color);
+  }
+}
+
+.subscribe {
+  display: flex;
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.subscribe__email-input {
+  width: 100%;
+  @include tel {
+    width: 450px;
+  }
+
+  height: 50px;
+  margin-bottom: 20px;
+
+  outline: none;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: var(--second-text-color);
+
+  @include desk {
+    width: 358px;
+    padding-left: 16px;
+    margin-right: 12px;
+  }
+
+  &::placeholder {
+    @include font(16px, null, 20px, 0.03em);
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 16px;
+  }
+}
+
+.subscribe__btn {
+  @extend %flex-centered;
+  width: 200px;
+}
+
+.subscribe__icon {
+  margin-left: 10px;
+  fill: var(--second-text-color);
+}
