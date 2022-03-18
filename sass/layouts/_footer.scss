@@ -27,6 +27,10 @@
 }
 
 .footer__wrap {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
   @include tab {
     flex-grow: 1;
     align-items: baseline;
@@ -34,6 +38,7 @@
 
   @include desk {
     justify-content: center;
+    margin-right: 93px;
   }
 }
 
@@ -41,9 +46,12 @@
   margin-bottom: 20px;
 }
 
-.footer-contacts {
+.footer-nav {
   @media screen and (max-width: 767px) {
     margin-bottom: 60px;
+  }
+  @include desk {
+    margin-right: 70px;
   }
 }
 
@@ -64,21 +72,6 @@
   &:focus,
   &:hover {
     color: var(--accent-color);
-  }
-}
-
-.join {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 60px;
-  }
-
-  // @media screen and (min-width: 480px) and (max-width: 1199px) {
-  //   padding-top: 5px;
-  // }
-
-  @include desk {
-    margin-left: 70px;
-    margin-right: 93px;
   }
 }
 

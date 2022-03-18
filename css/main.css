@@ -146,6 +146,12 @@ body {
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
+    margin-left: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mobile-menu {
+    margin-left: 93px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -532,12 +538,6 @@ body {
   .nav {
     display: flex;
     align-items: center;
-    margin-left: 88px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .nav {
-    margin-left: 93px;
   }
 }
 
@@ -663,6 +663,11 @@ body {
   margin-right: 10px;
   fill: currentColor;
 }
+@media screen and (max-width: 767px) {
+  .contacts__icon {
+    display: none;
+  }
+}
 
 .nav-list__link:hover,
 .nav-list__link:focus,
@@ -674,15 +679,22 @@ body {
 .hero {
   margin-left: auto;
   margin-right: auto;
-  height: 600px;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  height: 400px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-color: #2f303a;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   text-align: center;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-mob.jpg");
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
+  }
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
@@ -957,6 +969,11 @@ body {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .footer__wrap {
+    margin-bottom: 60px;
+  }
+}
 @media screen and (min-width: 768px) {
   .footer__wrap {
     flex-grow: 1;
@@ -966,6 +983,7 @@ body {
 @media screen and (min-width: 1200px) {
   .footer__wrap {
     justify-content: center;
+    margin-right: 93px;
   }
 }
 
@@ -974,8 +992,13 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .footer-contacts {
+  .footer-nav {
     margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-nav {
+    margin-right: 70px;
   }
 }
 
@@ -994,18 +1017,6 @@ body {
 }
 .footer-contacts__link:focus, .footer-contacts__link:hover {
   color: var(--accent-color);
-}
-
-@media screen and (max-width: 767px) {
-  .join {
-    margin-bottom: 60px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .join {
-    margin-left: 70px;
-    margin-right: 93px;
-  }
 }
 
 .join__text,
@@ -1099,7 +1110,6 @@ body {
 .filter {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -15px;
   margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
@@ -1114,11 +1124,13 @@ body {
   }
 }
 
-.filter__item {
-  margin-top: 15px;
-}
 .filter__item:not(:last-child) {
   margin-right: 8px;
+}
+@media screen and (max-width: 767px) {
+  .filter__item {
+    margin-top: 15px;
+  }
 }
 
 .filter__btn {
@@ -1141,22 +1153,23 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio {
-  margin: -15px;
-}
 @media screen and (min-width: 768px) {
   .portfolio {
+    margin: -15px;
     display: flex;
     flex-wrap: wrap;
   }
 }
 
-.portfolio__item {
-  margin: 15px;
+@media screen and (max-width: 767px) {
+  .portfolio__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
   .portfolio__item {
     flex-basis: calc((100% - 60px) / 2);
+    margin: 15px;
   }
 }
 @media screen and (min-width: 1200px) {

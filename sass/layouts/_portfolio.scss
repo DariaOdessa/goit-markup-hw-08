@@ -1,8 +1,6 @@
 .filter {
   display: flex;
   flex-wrap: wrap;
-
-  margin-top: -15px;
   margin-bottom: 40px;
 
   @include tab {
@@ -16,10 +14,12 @@
 }
 
 .filter__item {
-  margin-top: 15px;
-
   &:not(:last-child) {
     margin-right: 8px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-top: 15px;
   }
 }
 
@@ -47,18 +47,23 @@
 }
 
 .portfolio {
-  margin: -15px;
   @include tab {
+    margin: -15px;
     display: flex;
     flex-wrap: wrap;
   }
 }
 
 .portfolio__item {
-  margin: 15px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 
   @include tab {
     flex-basis: calc((100% - 60px) / 2);
+    margin: 15px;
   }
 
   @include desk {

@@ -17,17 +17,12 @@
   @include tab {
     display: flex;
     align-items: center;
-    margin-left: 88px;
-  }
-  @include desk {
-    margin-left: 93px;
   }
 }
 
 .nav-list {
   @include tab {
     display: flex;
-    // margin-left: 94px;
   }
 }
 
@@ -134,6 +129,10 @@
 }
 
 .contacts__icon {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
   margin-right: 10px;
   fill: currentColor;
 }
